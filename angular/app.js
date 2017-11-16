@@ -1,5 +1,3 @@
-const { clientID, domain } = require("../config");
-
 (function() {
   "use strict";
 
@@ -20,8 +18,8 @@ const { clientID, domain } = require("../config");
       jwtInterceptorProvider
     ) {
       authProvider.init({
-        domain,
-        clientID
+        domain: "devmountain.auth0.com",
+        clientID: "3SUPvC77-j6j5iIz8qRGVya_lWH43Wis"
       });
     });
 })();
