@@ -174,6 +174,36 @@ anchor@~0.11.0:
     "@sailshq/lodash" "^3.10.2"
     validator "4.4.0"
 
+angular-animate@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.6.tgz#6925647b141a040d241bf125040f1a150fcd8a70"
+
+angular-aria@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
+
+angular-jwt@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/angular-jwt/-/angular-jwt-0.1.9.tgz#db8bcf18f05aa57320ac2fda161d7e9622c099c3"
+
+angular-material@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
+
+angular-storage@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/angular-storage/-/angular-storage-0.0.15.tgz#005d64808982848d949725e2b2bf90a1dd27afc1"
+
+angular-ui-router@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-0.4.3.tgz#6c29546fe50b8d2f74614dcb8660d6fc40d6e167"
+  dependencies:
+    angular "^1.0.8"
+
+angular@^1.0.8, angular@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
+
 ansi-regex@^1.0.0, ansi-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-1.1.1.tgz#41c847194646375e6a1a5d10c3ca054ef9fc980d"
@@ -241,6 +271,10 @@ async@~1.2.0:
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
+
+auth0-angular@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/auth0-angular/-/auth0-angular-4.2.7.tgz#63d9ffb809617d10511a50f4270300b80a7fa6d9"
 
 aws-sign2@~0.7.0:
   version "0.7.0"

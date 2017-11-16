@@ -10,4 +10,6 @@ const authCheck = jwt({
   audience: clientID
 });
 
+console.log(authCheck);
+
 module.exports = authCheck;
