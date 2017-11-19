@@ -21,7 +21,6 @@
  */
 
 module.exports.routes = {
-
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
@@ -32,11 +31,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
-  'get /api/random-quote': 'QuoteController.getQuote',
-  'get /api/protected/random-quote': 'QuoteController.getProtectedQuote'
+  "/": {
+    view: "characters"
+  }
 
   /***************************************************************************
   *                                                                          *
@@ -47,5 +44,4 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
 };
