@@ -17,13 +17,5 @@ module.exports = {
         });
       }
     });
-    // rp
-    //   .get("https://swapi.co/api/people")
-    //   .then(response => {
-    //     return res.view("characters/characters", {
-    //       chars: JSON.parse(response).results
-    //     });
-    //   })
-    //   .catch(console.log);
   }
 };
