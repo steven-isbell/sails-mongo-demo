@@ -6,9 +6,22 @@
  */
 
 module.exports = {
-
   attributes: {
-
+    char_name: {
+      required: true,
+      type: "string"
+    },
+    char_films: {
+      required: false,
+      type: "array"
+    },
+    char_hair: {
+      required: false,
+      type: "string"
+    },
+    char_eye: {
+      required: false,
+      type: "string"
+    }
   }
 };
-

@@ -252,3 +252,110 @@ div.default-page {
 .pocket {
   display: none;
 }
+
+#homepage {
+  background: url("https://wallpapercave.com/wp/xTkHBfj.jpg")no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#homepage img {
+  height: 200px;
+  width: 400px;
+}
+
+#homepage div {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#homepage h1 {
+  font-size: 72px;
+}
+
+.color {
+  width: 350px;
+  margin: 0 auto;
+}
+.color li {
+  margin: 0 15px 0 0;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 100%;
+}
+.color .red {
+  background: #fa5a5a;
+}
+.color .yellow {
+  background: #f0d264;
+}
+.color .green {
+  background: #82c8a0;
+}
+.color .cyan {
+  background: #7fccde;
+}
+.color .blue {
+  background: #6698cb;
+}
+.color .purple {
+  background: #cb99c5;
+}
+
+.content,
+.content-gradient,
+.content-3d {
+  margin: 40px auto;
+}
+
+.btn-gradient {
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn-gradient.yellow {
+  background: rgba(240, 210, 100, 1);
+  background: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(rgba(240, 210, 100, 1)),
+    to(rgba(229, 201, 96, 1))
+  );
+  background: -webkit-linear-gradient(
+    rgba(240, 210, 100, 1) 0%,
+    rgba(229, 201, 96, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    rgba(240, 210, 100, 1) 0%,
+    rgba(229, 201, 96, 1) 100%
+  );
+  background: -o-linear-gradient(
+    rgba(240, 210, 100, 1) 0%,
+    rgba(229, 201, 96, 1) 100%
+  );
+  background: linear-gradient(
+    rgba(240, 210, 100, 1) 0%,
+    rgba(229, 201, 96, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#f0d264",
+      endColorstr="#e5c960",
+      GradientType=0
+    );
+}

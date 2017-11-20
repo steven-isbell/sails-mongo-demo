@@ -5,7 +5,13 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-module.exports = {
-	
-};
+const rp = require("request-promise");
 
+module.exports = {
+  getChars: (req, res) => {
+    rp
+      .get("https://swapi.co/api/people")
+      .then(response => res.json(response))
+      .catch(console.log);
+  }
+};
