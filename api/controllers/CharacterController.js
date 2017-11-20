@@ -9,9 +9,21 @@ const rp = require("request-promise");
 
 module.exports = {
   getChars: (req, res) => {
-    rp
-      .get("https://swapi.co/api/people")
-      .then(response => res.json(response))
-      .catch(console.log);
+    Characters.find().exec((err, records) => {
+      if (err) return res.json(err);
+      else {
+        return res.view("characters/characters", {
+          chars: records
+        });
+      }
+    });
+    // rp
+    //   .get("https://swapi.co/api/people")
+    //   .then(response => {
+    //     return res.view("characters/characters", {
+    //       chars: JSON.parse(response).results
+    //     });
+    //   })
+    //   .catch(console.log);
   }
 };

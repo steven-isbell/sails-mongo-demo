@@ -253,7 +253,7 @@ div.default-page {
   display: none;
 }
 
-#homepage {
+.section {
   background: url("https://wallpapercave.com/wp/xTkHBfj.jpg")no-repeat center center;
   background-size: cover;
   display: flex;
@@ -358,4 +358,23 @@ div.default-page {
       endColorstr="#e5c960",
       GradientType=0
     );
+}
+
+#character_card {
+  height: 300px;
+  width: 250px;
+  color: black;
+  background: white;
+  opacity: 0.7;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+#characters {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
