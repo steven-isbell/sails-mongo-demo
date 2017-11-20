@@ -270,6 +270,7 @@ div.default-page {
 
 #homepage div {
   height: 50%;
+  min-height: 50vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -377,4 +378,8 @@ div.default-page {
 #characters {
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#signup {
+  color: #fff;
 }

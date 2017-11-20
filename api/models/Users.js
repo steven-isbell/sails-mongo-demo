@@ -7,13 +7,17 @@
 
 module.exports = {
   attributes: {
-    name: {
+    username: {
       required: true,
       type: "string"
     },
-    age: {
+    password: {
       required: true,
       type: "integer"
+    },
+    characters: {
+      required: false,
+      type: "array"
     }
   }
 };

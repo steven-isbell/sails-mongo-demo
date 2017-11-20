@@ -15,7 +15,6 @@ module.exports.bootstrap = function(cb) {
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   Characters.find({ char_name: "Luke Skywalker" }).exec((err, records) => {
-    console.log(records);
     if (err) console.log("err: ", err);
     else if (!records[0]) {
       rp

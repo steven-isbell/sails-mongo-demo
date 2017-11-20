@@ -34,7 +34,15 @@ module.exports.routes = {
   "/": {
     view: "homepage"
   },
-  "get /characters": "CharacterController.getChars"
+  "/signup": {
+    view: "users/signup"
+  },
+  "/login": {
+    view: "users/login"
+  },
+  "get /characters": "CharacterController.getChars",
+  "post /login": "UserController.login",
+  "post /signup": "UserController.signup"
 
   /***************************************************************************
   *                                                                          *
