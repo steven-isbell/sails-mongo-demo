@@ -13,7 +13,8 @@ module.exports = {
       if (err) return res.json(err);
       else {
         return res.view("characters/characters", {
-          chars: records
+          chars: records,
+          user: req.session.userId
         });
       }
     });

@@ -40,8 +40,8 @@ module.exports = {
           .compare(password, record[0].password)
           .then(response => {
             if (response) {
-              req.session.userId = response.id;
-              return res.json("Add Profile View");
+              req.session.userId = record[0].id;
+              req.session.save(() => res.redirect("/characters"));
             } else return res.json("Hash Failed");
           })
           .catch(console.log);

@@ -261,6 +261,7 @@ div.default-page {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  color: white;
 }
 
 #homepage img {
@@ -378,12 +379,4 @@ div.default-page {
 #characters {
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-#signup {
-  color: #fff;
-}
-
-#login {
-  color: #fff;
 }

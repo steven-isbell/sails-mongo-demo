@@ -2,14 +2,12 @@
  * isAuthenticated
  *
  */
-const jwt = require("express-jwt");
-const { clientSecret, clientID } = require("../../config");
-
-const authCheck = jwt({
-  secret: new Buffer(clientSecret, "base64"),
-  audience: clientID
-});
-
-console.log(authCheck);
+function authCheck(req, res, next) {
+  console.log("SESSION: ", req.session);
+  if (req.session.userId) {
+    return next();
+  }
+  return res.redirect("/login");
+}
 
 module.exports = authCheck;
