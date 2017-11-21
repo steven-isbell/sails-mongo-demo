@@ -13,7 +13,6 @@
  */
 
 module.exports.session = {
-
   /***************************************************************************
   *                                                                          *
   * Session secret is automatically generated when your new app is created   *
@@ -21,8 +20,7 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: '843373aadb50846278b375b5e5e1a17a',
-
+  secret: "843373aadb50846278b375b5e5e1a17a",
 
   /***************************************************************************
   *                                                                          *
@@ -62,7 +60,6 @@ module.exports.session = {
   // pass: <redis auth password>,
   // prefix: 'sess:',
 
-
   /***************************************************************************
   *                                                                          *
   * Uncomment the following lines to set up a MongoDB session store that can *
@@ -74,8 +71,8 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // adapter: 'mongo',
-  // url: 'mongodb://user:password@localhost:27017/dbname', // user, password and port optional
+  adapter: "connect-mongo",
+  url: "mongodb://localhost:27017/payload" // user, password and port optional
 
   /***************************************************************************
   *                                                                          *
@@ -96,5 +93,4 @@ module.exports.session = {
   //     ssl: true
   //   }
   // }
-
 };

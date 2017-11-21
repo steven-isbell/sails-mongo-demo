@@ -24,6 +24,7 @@ module.exports = {
             const hashUser = Object.assign({}, req.body, { password: hash });
             console.log(hashUser);
             Users.create(hashUser).exec((err, record) => {
+              req.session.userId = response.id;
               return res.json({ message: err ? err : "Success" });
             });
           })
@@ -38,8 +39,10 @@ module.exports = {
         bcrypt
           .compare(password, record[0].password)
           .then(response => {
-            if (response) return res.json("Add Profile View");
-            else return res.json("Hash Failed");
+            if (response) {
+              req.session.userId = response.id;
+              return res.json("Add Profile View");
+            } else return res.json("Hash Failed");
           })
           .catch(console.log);
       } else
@@ -47,5 +50,8 @@ module.exports = {
           noUser: true
         });
     });
+  },
+  logout: (req, res) => {
+    req.session.destroy(() => res.view("homepage"));
   }
 };
