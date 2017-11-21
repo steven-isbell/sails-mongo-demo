@@ -20,6 +20,8 @@
  * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
 
+// TODO...Chang view syntax to controller syntax
+
 module.exports.routes = {
   /***************************************************************************
   *                                                                          *
@@ -35,7 +37,10 @@ module.exports.routes = {
     view: "homepage"
   },
   "/signup": {
-    view: "users/signup"
+    view: "users/signup",
+    locals: {
+      taken: false
+    }
   },
   "/login": {
     view: "users/login"

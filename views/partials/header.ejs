@@ -1,0 +1,13 @@
+<header id="header">
+    <nav>
+        <a href="http://localhost:1337/"><div>Home</div></a>
+        <a href="#"><div>About</div></a>
+        <% if (!user) { %>
+        <a href="http://localhost:1337/login"><div>Login</div></a>
+        <a href="http://localhost:1337/signup"><div>Signup</div></a>
+        <% } else { %>
+        <a href="http://localhost:1337/api/logout"><div>Logout</div></a>
+        <div><p>Logged in as <span><%= user.username %></span></p></div>
+        <% } %>  
+    </nav>
+</header>

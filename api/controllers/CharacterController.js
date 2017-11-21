@@ -12,9 +12,11 @@ module.exports = {
     Characters.find().exec((err, records) => {
       if (err) return res.json(err);
       else {
-        return res.view("characters/characters", {
-          chars: records,
-          user: req.session.userId
+        Users.find({ id: req.session.userId }).exec((error, record) => {
+          return res.view("characters/characters", {
+            chars: records,
+            user: record[0]
+          });
         });
       }
     });

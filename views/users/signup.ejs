@@ -1,5 +1,8 @@
 <section class="section" id="signup">
-    <h1>Please Login</h1>
+    <h1>Please Signup</h1>
+    <% if(taken) { %>
+        <h1>Username Taken</h1>
+    <% } %>
     <form method="POST" action="/api/signup">
         <p>
             <label>Username:</label>

@@ -74,6 +74,20 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
 }
+a:link,
+a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: red;
+}
 .top-bar {
   width: 100%;
   background-color: #e4f0f1;
@@ -379,4 +393,20 @@ div.default-page {
 #characters {
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#header {
+  height: 10vh;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+#header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

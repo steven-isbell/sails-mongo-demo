@@ -25,7 +25,7 @@ module.exports = {
             console.log(hashUser);
             Users.create(hashUser).exec((err, record) => {
               req.session.userId = response.id;
-              return res.json({ message: err ? err : "Success" });
+              return req.session.save(() => res.redirect("/characters"));
             });
           })
           .catch(console.log);
@@ -41,7 +41,7 @@ module.exports = {
           .then(response => {
             if (response) {
               req.session.userId = record[0].id;
-              req.session.save(() => res.redirect("/characters"));
+              return req.session.save(() => res.redirect("/characters"));
             } else return res.json("Hash Failed");
           })
           .catch(console.log);
@@ -52,6 +52,6 @@ module.exports = {
     });
   },
   logout: (req, res) => {
-    req.session.destroy(() => res.view("homepage"));
+    req.session.destroy(() => res.redirect("/"));
   }
 };
