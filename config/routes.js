@@ -41,8 +41,8 @@ module.exports.routes = {
     view: "users/login"
   },
   "get /characters": "CharacterController.getChars",
-  "post /login": "UserController.login",
-  "post /signup": "UserController.signup"
+  "post /api/login": "UserController.login",
+  "post /api/signup": "UserController.signup"
 
   /***************************************************************************
   *                                                                          *

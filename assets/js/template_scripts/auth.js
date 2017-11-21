@@ -13,3 +13,12 @@
 // };
 
 // loadChars();
+
+const login = () => {
+  const xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = () => {
+    xhttp.open("POST", "http://localhost:1337/api/characters", true);
+    xhttp.send();
+  };
+};

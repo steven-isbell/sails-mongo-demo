@@ -13,7 +13,7 @@ module.exports = {
     },
     password: {
       required: true,
-      type: "integer"
+      type: "string"
     },
     characters: {
       required: false,
