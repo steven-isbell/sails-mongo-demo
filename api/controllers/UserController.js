@@ -24,7 +24,7 @@ module.exports = {
             const hashUser = Object.assign({}, req.body, { password: hash });
             console.log(hashUser);
             Users.create(hashUser).exec((err, record) => {
-              req.session.userId = response.id;
+              req.session.userId = record.id;
               return req.session.save(() => res.redirect("/characters"));
             });
           })

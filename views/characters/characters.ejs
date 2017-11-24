@@ -1,9 +1,9 @@
 <%- partial("../partials/header") %>
 <section class="section" id="characters">
-    <% for(let i = 0; i < chars.length; i++) { %>
-        <div id="character_card">
-            <%= chars[i].char_name %>
+    <% chars.forEach((char) => { %>
+        <div id="character_card" onclick="addToList('<%= JSON.stringify(char) %>')">
+            <p><%= char.char_name %></p>
         </div>
-    <% } %>
+    <% }) %>
 </section>
 

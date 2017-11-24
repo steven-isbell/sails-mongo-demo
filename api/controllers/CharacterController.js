@@ -8,7 +8,7 @@
 const rp = require("request-promise");
 
 module.exports = {
-  getChars: (req, res) => {
+  getChars(req, res) {
     Characters.find().exec((err, records) => {
       if (err) return res.json(err);
       else {
@@ -20,5 +20,12 @@ module.exports = {
         });
       }
     });
+  },
+  addToList(req, res) {
+    console.log("REQBODY", req.body);
+    Users.update(
+      { id: req.session.userId },
+      { characters: [req.body] }
+    ).exec((err, record) => res.json("Success"));
   }
 };

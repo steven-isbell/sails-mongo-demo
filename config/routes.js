@@ -48,7 +48,8 @@ module.exports.routes = {
   "get /characters": "CharacterController.getChars",
   "post /api/login": "UserController.login",
   "post /api/signup": "UserController.signup",
-  "get /api/logout": "UserController.logout"
+  "get /api/logout": "UserController.logout",
+  "post /api/addToList": "CharacterController.addToList"
 
   /***************************************************************************
   *                                                                          *
