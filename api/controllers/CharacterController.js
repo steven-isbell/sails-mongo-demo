@@ -22,10 +22,19 @@ module.exports = {
     });
   },
   addToList(req, res) {
-    console.log("REQBODY", req.body);
+    if (!req.session.characters) req.session.characters = [];
+    console.log("CHARACTERS: ", req.session.characters);
+    req.session.characters.push(req.body);
+    res.json(req.session.characters);
+  },
+  insertList(req, res) {
     Users.update(
-      { id: req.session.userId },
-      { characters: [req.body] }
-    ).exec((err, record) => res.json("Success"));
+      { id: req.session.id },
+      { characters: req.session.characters }
+    ).exec((err, response) => {
+      return res.view("characters/library", {
+        chars: req.session.characters
+      });
+    });
   }
 };

@@ -1,3 +1,7 @@
-<section class="section" id="library">
-    <div>Selected Characters Will Go Here</div>
+<section class="section" id="characters">
+    <% chars.forEach((char) => { %>
+        <div id="character_card" onclick="addToList('<%= JSON.stringify(char) %>')">
+            <p><%= char.char_name %></p>
+        </div>
+    <% }) %>
 </section>
