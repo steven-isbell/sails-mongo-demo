@@ -22,18 +22,19 @@ module.exports = {
     });
   },
   addToList(req, res) {
-    if (!req.session.characters) req.session.characters = [];
-    console.log("CHARACTERS: ", req.session.characters);
-    req.session.characters.push(req.body);
-    res.json(req.session.characters);
+    if (!req.session.user.characters) req.session.user.characters = [];
+
+    req.session.user.characters.push(req.body);
+    res.json(req.session.user.characters);
   },
   insertList(req, res) {
     Users.update(
-      { id: req.session.id },
-      { characters: req.session.characters }
+      { id: req.session.userId },
+      { characters: req.session.user.characters }
     ).exec((err, response) => {
       return res.view("characters/library", {
-        chars: req.session.characters
+        chars: req.session.user.characters,
+        user: req.session.user
       });
     });
   }

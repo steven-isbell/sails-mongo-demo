@@ -1,3 +1,4 @@
+<%- partial("../partials/header") %>
 <section class="section" id="characters">
     <% chars.forEach((char) => { %>
         <div id="character_card" onclick="addToList('<%= JSON.stringify(char) %>')">
